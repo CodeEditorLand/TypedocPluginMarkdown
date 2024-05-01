@@ -1,19 +1,45 @@
 {
+	"name": "vuepress-plugin-typedoc",
+	"version": "0.0.1",
+	"private": false,
 	"description": "A VuePress plugin to build API documentation with TypeDoc.",
-	"devDependencies": {
-		"typedoc-plugin-markdown": ">=3.13.0"
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TypeDocPluginMarkdown#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TypeDocPluginMarkdown/issues"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TypeDocPluginMarkdown.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
 	"exports": {
 		".": "./dist/v1/index.js",
 		"./next": "./dist/v2/index.js"
 	},
+	"main": "./dist/v1/index.js",
 	"files": [
 		"dist/"
 	],
-	"main": "./dist/v1/index.js",
-	"name": "vuepress-plugin-typedoc",
 	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
 		"build": "rm -rf ./dist && tsc",
-		"prepublishOnly": "yarn run lint && yarn run build"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"typedoc-plugin-markdown": ">=3.13.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

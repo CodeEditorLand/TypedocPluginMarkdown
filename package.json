@@ -1,6 +1,36 @@
 {
+	"version": "0.0.1",
+	"private": false,
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/TypeDocPluginMarkdown#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/TypeDocPluginMarkdown/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/TypeDocPluginMarkdown.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"workspaces": [
+		"packages/typedoc-plugin-markdown"
+	],
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"build": "npm run build --workspaces",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
 	"devDependencies": {
 		"@changesets/cli": "^2.25.2",
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
 		"@types/fs-extra": "^9.0.13",
 		"@types/node": "^18.11.11",
 		"fs-extra": "^11.1.0",
@@ -11,10 +41,7 @@
 		"typedoc": "^0.23.21",
 		"typedoc-plugin-mdn-links": "^2.0.0"
 	},
-	"scripts": {
-		"build": "npm run build --workspaces"
-	},
-	"workspaces": [
-		"packages/typedoc-plugin-markdown"
-	]
+	"publishConfig": {
+		"access": "public"
+	}
 }
