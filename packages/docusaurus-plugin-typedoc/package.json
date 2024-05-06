@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"typedoc-plugin-markdown": "3.17.1"
+		"typedoc-plugin-markdown": "4.0.0"
 	},
 	"publishConfig": {
 		"access": "public"

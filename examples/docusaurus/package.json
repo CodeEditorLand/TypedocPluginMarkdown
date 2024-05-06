@@ -47,14 +47,14 @@
 		]
 	},
 	"dependencies": {
-		"@docusaurus/core": "3.2.1",
-		"@docusaurus/preset-classic": "3.2.1",
+		"@docusaurus/core": "3.3.2",
+		"@docusaurus/preset-classic": "3.3.2",
 		"clsx": "2.1.1",
 		"docusaurus-plugin-typedoc": "*",
 		"typedoc-plugin-markdown": "*"
 	},
 	"devDependencies": {
-		"@docusaurus/module-type-aliases": "3.2.1",
+		"@docusaurus/module-type-aliases": "3.3.2",
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6"
 	},
