@@ -22,7 +22,6 @@ samples
 /connect.lock
 coverage
 /libpeerconnection.log
-npm-debug.log
 testem.log
 /typings
 .npmrc
@@ -32,7 +31,6 @@ testem.log
 /e2e/*.map
 
 #System Files
-.DS_Store
 Thumbs.db
 
 #ignore js files inside src/spec
