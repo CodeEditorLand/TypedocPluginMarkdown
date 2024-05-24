@@ -1,0 +1,106 @@
+name: NPM
+
+concurrency:
+    group: NPM-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions:
+    security-events: write
+    contents: write
+    pull-requests: write
+
+on:
+    workflow_dispatch:
+    release:
+        types: [created]
+    workflow_call:
+
+jobs:
+    Publish:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            id-token: write
+
+        steps:
+            - uses: actions/checkout@v4.1.6
+
+            - uses: actions/setup-node@v4.0.2
+              with:
+                  node-version: "18"
+                  registry-url: "https://registry.npmjs.org"
+
+            - run: npm install -g npm
+
+            - name: Publish ./examples/docusaurus
+              continue-on-error: true
+              working-directory: ./examples/docusaurus
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish .
+              continue-on-error: true
+              working-directory: .
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/docusaurus-plugin-typedoc
+              continue-on-error: true
+              working-directory: ./packages/docusaurus-plugin-typedoc
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/typedoc-bitbucket-theme
+              continue-on-error: true
+              working-directory: ./packages/typedoc-bitbucket-theme
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/typedoc-github-wiki-theme
+              continue-on-error: true
+              working-directory: ./packages/typedoc-github-wiki-theme
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/typedoc-gitlab-wiki-theme
+              continue-on-error: true
+              working-directory: ./packages/typedoc-gitlab-wiki-theme
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/typedoc-hugo-theme
+              continue-on-error: true
+              working-directory: ./packages/typedoc-hugo-theme
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/typedoc-plugin-markdown
+              continue-on-error: true
+              working-directory: ./packages/typedoc-plugin-markdown
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish ./packages/vuepress-plugin-typedoc
+              continue-on-error: true
+              working-directory: ./packages/vuepress-plugin-typedoc
+              run: |
+                  npm publish --legacy-peer-deps --provenance --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
