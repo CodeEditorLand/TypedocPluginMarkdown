@@ -2,9 +2,7 @@
 	"name": "typedoc-plugin-markdown",
 	"description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
 	"main": "dist/index.js",
-	"files": [
-		"dist/"
-	],
+	"files": ["dist/"],
 	"scripts": {
 		"prebuild": "ts-node scripts/build-resources",
 		"build": "rm -rf dist && tsc",

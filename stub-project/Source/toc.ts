@@ -1,16 +1,16 @@
 export const _answer = {
-  Answer: 'yes',
-  answer: 'no',
+	Answer: "yes",
+	answer: "no",
 };
 
-export type answer = 'yes' | 'no';
+export type answer = "yes" | "no";
 
-export const answer = 'yes';
+export const answer = "yes";
 
-export type Answer = 'yes' | 'no';
+export type Answer = "yes" | "no";
 
 export class SomeClass {
-  someMethod() {
-    return true;
-  }
+	someMethod() {
+		return true;
+	}
 }

@@ -1,16 +1,16 @@
-import { IndexedAccessType } from 'typedoc';
-import { MarkdownThemeRenderContext } from '../theme-context';
+import type { IndexedAccessType } from "typedoc";
+import type { MarkdownThemeRenderContext } from "../theme-context";
 
 export function indexAccessType(
-  context: MarkdownThemeRenderContext,
-  model: IndexedAccessType,
+	context: MarkdownThemeRenderContext,
+	model: IndexedAccessType,
 ) {
-  const md: string[] = [];
-  if (model.objectType) {
-    md.push(context.partials.someType(model.objectType));
-  }
-  if (model.indexType) {
-    md.push(`[${context.partials.someType(model.indexType)}]`);
-  }
-  return md.join('');
+	const md: string[] = [];
+	if (model.objectType) {
+		md.push(context.partials.someType(model.objectType));
+	}
+	if (model.indexType) {
+		md.push(`[${context.partials.someType(model.indexType)}]`);
+	}
+	return md.join("");
 }

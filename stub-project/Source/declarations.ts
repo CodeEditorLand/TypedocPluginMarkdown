@@ -1,6 +1,6 @@
-export const stringConstWithDefaultValue = 'hello';
-export let stringLetWithDefaultValue = 'hello';
-stringLetWithDefaultValue = 'world';
+export const stringConstWithDefaultValue = "hello";
+export let stringLetWithDefaultValue = "hello";
+stringLetWithDefaultValue = "world";
 
 export let undefinedNumberDeclaration: number;
 
@@ -10,61 +10,59 @@ export let undefinedNumberDeclaration: number;
  * @param objectLiteralDeclaration.valueY description for valueY
  */
 export const objectLiteralDeclaration = {
-  /**
-   * Comment for valueZ
-   */
-  valueZ: 'foo',
-  /**
-   * Comment for value Y
-   */
-  valueY: function () {
-    return 'foo';
-  },
-  /**
-   * Comment for valueX
-   */
-  valueX: {
-    valueZ: 'foo',
-    valueA: [100, 200, 300],
-  },
-  /**
-   * Comment for valueA
-   */
-  valueA: 100,
-  valueB: true,
-  valueC: {},
+	/**
+	 * Comment for valueZ
+	 */
+	valueZ: "foo",
+	/**
+	 * Comment for value Y
+	 */
+	valueY: () => "foo",
+	/**
+	 * Comment for valueX
+	 */
+	valueX: {
+		valueZ: "foo",
+		valueA: [100, 200, 300],
+	},
+	/**
+	 * Comment for valueA
+	 */
+	valueA: 100,
+	valueB: true,
+	valueC: {},
 };
 
 export let typeLiteralDeclaration: {
-  /**
-   * Comment for valueZ
-   */
-  valueZ: string;
-  valueY: { (): string };
-  /**
-   * Comment for valueX
-   */
-  valueX: {
-    /**
-     * Nested comment for valueZ
-     */
-    valueZ: string;
-    valueY: { (z: string): { a: string; b: string } };
-    valueA: number[];
-  };
-  /**
-   * Comments for valueA
-   */
-  valueA?: number;
-  valueB?: boolean;
-  valueC: { [dataId: string]: 'ok' | 'ko' };
+	/**
+	 * Comment for valueZ
+	 */
+	valueZ: string;
+	valueY: { (): string };
+	/**
+	 * Comment for valueX
+	 */
+	valueX: {
+		/**
+		 * Nested comment for valueZ
+		 */
+		valueZ: string;
+		valueY: { (z: string): { a: string; b: string } };
+		valueA: number[];
+	};
+	/**
+	 * Comments for valueA
+	 */
+	valueA?: number;
+	valueB?: boolean;
+	valueC: { [dataId: string]: "ok" | "ko" };
 };
 
 export let functionDeclaration: (someArg: number) => boolean;
 
 export let indexableDeclaration: {
-  [index: number]: string;
-  arg1: string;
+	[index: number]: string;
+	arg1: string;
 };
 
 /**
@@ -74,30 +72,30 @@ export let indexableDeclaration: {
  * @param {string} objectLiteralAsConstDeclaration.Prop2 - Comment for Prop2.
  */
 export const objectLiteralAsConstDeclaration = {
-  Prop1: 'Prop1',
-  Prop2: 'Prop2',
-  Prop3: 'Prop3',
+	Prop1: "Prop1",
+	Prop2: "Prop2",
+	Prop3: "Prop3",
 } as const;
 
-export const __DOUBLE_UNDERSCORES_DECLARATION__ = Symbol.for('__type__');
+export const __DOUBLE_UNDERSCORES_DECLARATION__ = Symbol.for("__type__");
 
 export type AnyFunctionType<A = any> = (...input: any[]) => A;
 
 export enum EnumDeclarations {
-  Up,
-  Down,
-  Left,
-  Right,
+	Up = 0,
+	Down = 1,
+	Left = 2,
+	Right = 3,
 }
 
 export enum EnumDeclarationsWithDefaults {
-  North = 'North',
-  South = 'South',
-  East = 'East',
-  West = 'West',
+	North = "North",
+	South = "South",
+	East = "East",
+	West = "West",
 }
 
 export let getterAndSetter: {
-  get getMe(): Promise<string>;
-  set setMe(x: string);
+	get getMe(): Promise<string>;
+	set setMe(x: string);
 };

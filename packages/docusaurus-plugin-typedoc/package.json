@@ -2,9 +2,7 @@
 	"name": "docusaurus-plugin-typedoc",
 	"description": "A Docusaurus v2 plugin to build API documentation with TypeDoc.",
 	"main": "dist/index.js",
-	"files": [
-		"dist/"
-	],
+	"files": ["dist/"],
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"build-and-test": "yarn run build && yarn run test",

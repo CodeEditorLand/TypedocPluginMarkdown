@@ -1,7 +1,7 @@
-import { Application } from 'typedoc';
+import type { Application } from "typedoc";
 
-import { GitlabWikiTheme } from './theme';
+import { GitlabWikiTheme } from "./theme";
 
 export function load(app: Application) {
-  app.renderer.defineTheme('gitlab-wiki', GitlabWikiTheme);
+	app.renderer.defineTheme("gitlab-wiki", GitlabWikiTheme);
 }

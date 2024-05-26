@@ -1,13 +1,13 @@
-import { TypeDocOptions } from 'typedoc';
+import type { TypeDocOptions } from "typedoc";
 
 export interface PluginOptions extends TypeDocOptions {
-  sidebar?: SidebarOptions;
-  hideBreadcrumbs?: boolean;
-  hideInPageTOC?: boolean;
+	sidebar?: SidebarOptions;
+	hideBreadcrumbs?: boolean;
+	hideInPageTOC?: boolean;
 }
 
 export interface SidebarOptions {
-  fullNames: boolean;
-  parentCategory: string;
-  autoConfiguration: boolean;
+	fullNames: boolean;
+	parentCategory: string;
+	autoConfiguration: boolean;
 }

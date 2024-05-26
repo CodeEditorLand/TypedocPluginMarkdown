@@ -12,35 +12,35 @@ export const categoryVariableA2 = true;
  * @category CategoryA
  */
 export function categoryFunctionA1() {
-  return true;
+	return true;
 }
 
 /**
  * @category CategoryA
  */
 export function categoryFunctionA2() {
-  return true;
+	return true;
 }
 
 /**
  * @category CategoryA
  */
 export function categoryFunctionA3() {
-  return true;
+	return true;
 }
 
 /**
  * @category CategoryA
  */
 export interface CategoryInterfaceA1 {
-  value: string;
+	value: string;
 }
 
 /**
  * @category CategoryA
  */
 export interface CategoryInterfaceA2 {
-  value: string;
+	value: string;
 }
 
 /**
@@ -52,21 +52,21 @@ export const categoryVariableB1 = true;
  * @category CategoryB
  */
 export function categoryFunctionB2() {
-  return true;
+	return true;
 }
 
 export const otherVariableA = true;
 
 export function otherFunctionA() {
-  return true;
+	return true;
 }
 
 export const otherVariableB = true;
 
 export function otherFunctionB() {
-  return true;
+	return true;
 }
 
 export interface OtherInterfaceA {
-  value: string;
+	value: string;
 }

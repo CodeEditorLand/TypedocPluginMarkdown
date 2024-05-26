@@ -1,8 +1,8 @@
 {
-  "mode": "pre",
-  "tag": "next",
-  "initialVersions": {
-    "typedoc-plugin-markdown": "3.13.4"
-  },
-  "changesets": []
+	"mode": "pre",
+	"tag": "next",
+	"initialVersions": {
+		"typedoc-plugin-markdown": "3.13.4"
+	},
+	"changesets": []
 }

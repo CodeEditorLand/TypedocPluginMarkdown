@@ -1,7 +1,5 @@
 {
-	"workspaces": [
-		"packages/typedoc-plugin-markdown"
-	],
+	"workspaces": ["packages/typedoc-plugin-markdown"],
 	"scripts": {
 		"build": "npm run build --workspaces"
 	},

@@ -1,5 +1,5 @@
 export class Breadcrumbs {
-  someMethod() {
-    return true;
-  }
+	someMethod() {
+		return true;
+	}
 }

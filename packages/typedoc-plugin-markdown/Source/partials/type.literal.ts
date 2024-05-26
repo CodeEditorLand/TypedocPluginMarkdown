@@ -1,12 +1,12 @@
-import { LiteralType } from 'typedoc';
-import { MarkdownThemeRenderContext } from '../theme-context';
+import type { LiteralType } from "typedoc";
+import type { MarkdownThemeRenderContext } from "../theme-context";
 
 export function literalType(
-  context: MarkdownThemeRenderContext,
-  literalType: LiteralType,
+	context: MarkdownThemeRenderContext,
+	literalType: LiteralType,
 ) {
-  if (typeof literalType.value === 'bigint') {
-    return `\`${literalType.value}n\``;
-  }
-  return `\`\`${JSON.stringify(literalType.value)}\`\``;
+	if (typeof literalType.value === "bigint") {
+		return `\`${literalType.value}n\``;
+	}
+	return `\`\`${JSON.stringify(literalType.value)}\`\``;
 }

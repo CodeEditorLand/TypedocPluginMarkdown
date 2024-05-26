@@ -74,37 +74,37 @@ export const commentsWithFencedBlock = true;
  * @returns Return comments
  */
 export function commentsInReturn() {
-  return;
+	return;
 }
 
 /**
  * Comment for class
  */
 export class CommentClass {
-  /**
-   * Comment for property
-   */
-  comment: string;
-  /**
-   * Comment for constructor
-   */
-  constructor(comment: string) {
-    this.comment = comment;
-  }
-  /**
-   * Comment for method
-   */
-  getComment() {
-    return 'Comment';
-  }
+	/**
+	 * Comment for property
+	 */
+	comment: string;
+	/**
+	 * Comment for constructor
+	 */
+	constructor(comment: string) {
+		this.comment = comment;
+	}
+	/**
+	 * Comment for method
+	 */
+	getComment() {
+		return "Comment";
+	}
 }
 
 /**
  * Some comments
  */
 export type literalWithBlockComments = {
-  /**
-   * Comment for prop
-   */
-  prop: string;
+	/**
+	 * Comment for prop
+	 */
+	prop: string;
 };

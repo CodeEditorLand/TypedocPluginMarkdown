@@ -6,9 +6,7 @@
 		"./next": "./dist/v2/index.js"
 	},
 	"main": "./dist/v1/index.js",
-	"files": [
-		"dist/"
-	],
+	"files": ["dist/"],
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"prepublishOnly": "yarn run lint && yarn run build"
