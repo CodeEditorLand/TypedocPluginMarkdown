@@ -1,11 +1,11 @@
-import type { IntersectionType } from "typedoc";
-import type { MarkdownThemeRenderContext } from "../theme-context";
+import { IntersectionType } from 'typedoc';
+import { MarkdownThemeRenderContext } from '../theme-context';
 
 export function intersectionType(
-	context: MarkdownThemeRenderContext,
-	model: IntersectionType,
+  context: MarkdownThemeRenderContext,
+  model: IntersectionType,
 ) {
-	return model.types
-		.map((intersectionType) => context.partials.someType(intersectionType))
-		.join(" & ");
+  return model.types
+    .map((intersectionType) => context.partials.someType(intersectionType))
+    .join(' & ');
 }

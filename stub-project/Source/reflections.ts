@@ -4,18 +4,18 @@
 export class ReflectionClass {}
 
 export interface CallableReflection {
-	(): string;
+  (): string;
 }
 
 export interface IndexableReflection {
-	[index: number]: string;
+  [index: number]: string;
 }
 
 export enum EnumReflection {
-	Up = "UP",
-	Down = "DOWN",
-	Left = "LEFT",
-	Right = "RIGHT",
+  Up = 'UP',
+  Down = 'DOWN',
+  Left = 'LEFT',
+  Right = 'RIGHT',
 }
 
 export class ImplementedClass implements ReflectionClass {}

@@ -8,11 +8,11 @@
  *
  */
 export function functionWithParameters(
-	paramZ: string,
-	paramG: any,
-	paramA: any,
+  paramZ: string,
+  paramG: any,
+  paramA: any,
 ): number {
-	return 0;
+  return 0;
 }
 
 /**
@@ -21,7 +21,7 @@ export function functionWithParameters(
  * @param someParam  This is some numeric parameter.
  */
 export const variableFunction = (someParam: number) => {
-	return 0;
+  return 0;
 };
 
 /**
@@ -31,8 +31,8 @@ export const variableFunction = (someParam: number) => {
  * @param optionalParam  An optional parameter.
  */
 export function functionWithOptionalParam(
-	requiredParam: string,
-	optionalParam?: string,
+  requiredParam: string,
+  optionalParam?: string,
 ) {}
 
 /**
@@ -45,14 +45,14 @@ export function functionWithOptionalParam(
  * @param valueE  A parameter with a default null value.
  */
 export function functionWithDefaults(
-	valueA = "defaultValue",
-	valueB = 100,
-	valueC: number = Number.NaN,
-	valueD = true,
-	valueE: boolean = null,
-	valueF = "<foo>",
+  valueA = 'defaultValue',
+  valueB = 100,
+  valueC: number = Number.NaN,
+  valueD = true,
+  valueE: boolean = null,
+  valueF = '<foo>',
 ): string {
-	return valueA;
+  return valueA;
 }
 
 /**
@@ -61,7 +61,7 @@ export function functionWithDefaults(
  * @param rest  The rest parameter.
  */
 export function functionWithRest(...rest: string[]): string {
-	return rest.join(", ");
+  return rest.join(', ');
 }
 
 /**
@@ -85,29 +85,29 @@ export function multipleSignatures(value: { name: string }): string;
  *
  */
 export function multipleSignatures(): string {
-	return "";
+  return '';
 }
 
 export function functionWithUnionTypes(
-	arg: boolean[] | number,
-	...args: (string | number)[]
+  arg: boolean[] | number,
+  ...args: (string | number)[]
 ): any {
-	return null;
+  return null;
 }
 
 export interface CallableSignature {
-	(): string;
+  (): string;
 }
 
 export function functionWithNamedParams({ x: number, b: string }) {
-	return "";
+  return '';
 }
 
 /**
  * @private
  */
 export function privateFunction() {
-	return "";
+  return '';
 }
 
 export const functionWithTypeParams = <Item = boolean | string>() => true;
@@ -117,7 +117,7 @@ export const functionWithTypeParams = <Item = boolean | string>() => true;
  * @returns Return comments
  */
 export function functionReturningAnObject() {
-	return { x: 1, y: 2 };
+  return { x: 1, y: 2 };
 }
 
 /**
@@ -125,7 +125,7 @@ export function functionReturningAnObject() {
  * @returns Return comments
  */
 export function functionReturningAFunction() {
-	return <T>(x: string) => true;
+  return <T>(x: string) => true;
 }
 
 /**
@@ -133,7 +133,7 @@ export function functionReturningAFunction() {
  * @returns Return comments
  */
 export function commentsInReturn() {
-	return true;
+  return true;
 }
 
 /**
@@ -145,14 +145,14 @@ export function commentsInReturn() {
  * @returns Function for which to provide the default value
  */
 export const swtch =
-	<T, R>(value: T, ...cases: [T, R][]) =>
-	(def: R) => {
-		for (const c of cases) {
-			if (c[0] === value) return c[1];
-		}
+  <T, R>(value: T, ...cases: [T, R][]) =>
+  (def: R) => {
+    for (const c of cases) {
+      if (c[0] === value) return c[1];
+    }
 
-		return def;
-	};
+    return def;
+  };
 
 export type _someCallback_ = (name: string, value: unknown) => void;
 
@@ -163,26 +163,26 @@ export type _someCallback_ = (name: string, value: unknown) => void;
  * @param bar Another value
  */
 export function functionWithNamedParamsAndComments(
-	{ foo = 42, bar = 43 }: { foo?: number; bar?: number } = {},
-	/**
-	 * Another param comment
-	 */
-	anotherParam: string,
+  { foo = 42, bar = 43 }: { foo?: number; bar?: number } = {},
+  /**
+   * Another param comment
+   */
+  anotherParam: string,
 ) {}
 
 /**
  * @param n - a|b
  */
 export function functionWithPipesInParamsAndComments(
-	n: number | null,
+  n: number | null,
 ): number | null {
-	return n;
+  return n;
 }
 
 export function functionWithReferenceType(
-	descriptor: TypedPropertyDescriptor<any>,
+  descriptor: TypedPropertyDescriptor<any>,
 ) {
-	return true;
+  return true;
 }
 
 /**
@@ -193,42 +193,42 @@ export function functionWithReferenceType(
  * @param context The context of the method call.
  */
 export function functionWithNestedParams(
-	params: {
-		name: string;
-		parent?: number;
-		nestedObj: {
-			name: string;
-			value: number;
-			obj: {
-				name: () => void;
-			};
-		};
-	},
-	context: any,
+  params: {
+    name: string;
+    parent?: number;
+    nestedObj: {
+      name: string;
+      value: number;
+      obj: {
+        name: () => void;
+      };
+    };
+  },
+  context: any,
 ) {
-	return true;
+  return true;
 }
 
 export class ClassWithConstructor {
-	constructor(x: string, y: string) {}
+  constructor(x: string, y: string) {}
 }
 
 export type User = {
-	id: string;
-	data: string;
+  id: string;
+  data: string;
 };
 
 export const promiseReturningASymbol = (): Promise<User> => {
-	return new Promise((resolve) => {
-		resolve({ id: "id", data: "data" });
-	});
+  return new Promise((resolve) => {
+    resolve({ id: 'id', data: 'data' });
+  });
 };
 
 export const promiseReturningAnObject = (): Promise<{
-	id: string;
-	data: string;
+  id: string;
+  data: string;
 }> => {
-	return new Promise((resolve) => {
-		resolve({ id: "id", data: "data" });
-	});
+  return new Promise((resolve) => {
+    resolve({ id: 'id', data: 'data' });
+  });
 };

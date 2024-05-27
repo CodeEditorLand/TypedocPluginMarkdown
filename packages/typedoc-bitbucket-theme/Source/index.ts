@@ -1,6 +1,6 @@
-import type { Application } from "typedoc";
-import { BitbucketTheme } from "./theme";
+import { Application } from 'typedoc';
+import { BitbucketTheme } from './theme';
 
 export function load(app: Application) {
-	app.renderer.defineTheme("bitbucket", BitbucketTheme);
+  app.renderer.defineTheme('bitbucket', BitbucketTheme);
 }

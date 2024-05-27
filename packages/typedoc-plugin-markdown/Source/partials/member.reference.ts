@@ -1,21 +1,21 @@
-import type { ReferenceReflection } from "typedoc";
-import type { MarkdownThemeRenderContext } from "../theme-context";
+import { ReferenceReflection } from 'typedoc';
+import { MarkdownThemeRenderContext } from '../theme-context';
 
 export function referenceMember(
-	context: MarkdownThemeRenderContext,
-	props: ReferenceReflection,
+  context: MarkdownThemeRenderContext,
+  props: ReferenceReflection,
 ) {
-	const referenced = props.tryGetTargetReflectionDeep();
+  const referenced = props.tryGetTargetReflectionDeep();
 
-	if (!referenced) {
-		return `Re-exports ${props.name}`;
-	}
+  if (!referenced) {
+    return `Re-exports ${props.name}`;
+  }
 
-	if (props.name === referenced.name) {
-		return `Re-exports [${referenced.name}](${context.urlTo(referenced)})`;
-	}
+  if (props.name === referenced.name) {
+    return `Re-exports [${referenced.name}](${context.urlTo(referenced)})`;
+  }
 
-	return `Renames and re-exports [${referenced.name}](${context.urlTo(
-		referenced,
-	)})`;
+  return `Renames and re-exports [${referenced.name}](${context.urlTo(
+    referenced,
+  )})`;
 }

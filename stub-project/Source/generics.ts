@@ -4,8 +4,8 @@
  * @typeparam V - Some other type param
  */
 export class ClassWithTypeParams<T, V> {
-	propT: T;
-	propV: V;
+  propT: T;
+  propV: V;
 }
 
 export const functionWithTypeParam = <A>() => true;
@@ -16,20 +16,20 @@ export const functionWithTypeParam = <A>() => true;
  * @typeParam B Comment for type `B`
  */
 export const functionWithTypeParams = <
-	A extends ClassWithTypeParams<string, number>,
-	B = boolean | string,
-	C = string,
+  A extends ClassWithTypeParams<string, number>,
+  B = boolean | string,
+  C = string,
 >() => true;
 
 export function genericsWithDefaults<Type extends boolean = boolean>() {
-	return;
+  return;
 }
 
 export function functionWithGenericConstraints<Type, Key extends keyof Type>(
-	obj: Type,
-	key: Key,
+  obj: Type,
+  key: Key,
 ) {
-	return obj[key];
+  return obj[key];
 }
 
 export type Generic1<T> = Generic2<Generic3<T>>;
