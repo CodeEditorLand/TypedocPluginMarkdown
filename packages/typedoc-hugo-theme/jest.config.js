@@ -1,7 +1,7 @@
-const base = require("../../jest.config.base.js");
+const base = require('../../jest.config.base.js');
 
 module.exports = {
-	...base,
-	name: "typedoc-hugo-theme",
-	displayName: "typedoc-hugo-theme",
+  ...base,
+  name: 'typedoc-hugo-theme',
+  displayName: 'typedoc-hugo-theme',
 };
