@@ -26,11 +26,11 @@
     "build": "rm -rf ./dist && tsc"
   },
   "peerDependencies": {
-    "typedoc": ">=0.23.0",
-    "typedoc-plugin-markdown": ">=3.13.0"
+    "typedoc": ">=0.25.13",
+    "typedoc-plugin-markdown": ">=4.0.3"
   },
   "devDependencies": {
-    "typedoc-plugin-markdown": ">=3.13.0"
+    "typedoc-plugin-markdown": ">=4.0.3"
   },
   "license": "MIT",
   "keywords": [
