@@ -25,13 +25,13 @@
 		]
 	},
 	"dependencies": {
-		"@docusaurus/core": "2.2.0",
-		"@docusaurus/preset-classic": "2.2.0",
-		"clsx": "^1.2.1",
+		"@docusaurus/core": "3.4.0",
+		"@docusaurus/preset-classic": "3.4.0",
+		"clsx": "^2.1.1",
 		"docusaurus-plugin-typedoc": "*",
 		"typedoc-plugin-markdown": "*"
 	},
 	"devDependencies": {
-		"@docusaurus/module-type-aliases": "2.2.0"
+		"@docusaurus/module-type-aliases": "3.4.0"
 	}
 }
