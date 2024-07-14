@@ -75,7 +75,7 @@ jobs:
                           --unsafe-perm=true
                         ]
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -92,7 +92,7 @@ jobs:
                   name: .-examples-docusaurus-Node-${{ matrix.node-version }}-Target
                   path: ./examples/docusaurus/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -101,7 +101,7 @@ jobs:
             - run: pnpm install
               working-directory: ./examples/vuepress-next
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -110,7 +110,7 @@ jobs:
             - run: pnpm install
               working-directory: ./examples/vuepress
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -127,7 +127,7 @@ jobs:
                   name: .-Node-${{ matrix.node-version }}-Target
                   path: ./Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -152,7 +152,7 @@ jobs:
                   name: .-packages-docusaurus-plugin-typedoc-Node-${{ matrix.node-version }}-Target
                   path: ./packages/docusaurus-plugin-typedoc/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -177,7 +177,7 @@ jobs:
                   name: .-packages-typedoc-bitbucket-theme-Node-${{ matrix.node-version }}-Target
                   path: ./packages/typedoc-bitbucket-theme/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -202,7 +202,7 @@ jobs:
                   name: .-packages-typedoc-github-wiki-theme-Node-${{ matrix.node-version }}-Target
                   path: ./packages/typedoc-github-wiki-theme/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -227,7 +227,7 @@ jobs:
                   name: .-packages-typedoc-gitlab-wiki-theme-Node-${{ matrix.node-version }}-Target
                   path: ./packages/typedoc-gitlab-wiki-theme/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
@@ -268,7 +268,7 @@ jobs:
                   name: .-packages-typedoc-plugin-markdown-Node-${{ matrix.node-version }}-Target
                   path: ./packages/typedoc-plugin-markdown/Target
 
-            - uses: actions/setup-node@v4.0.2
+            - uses: actions/setup-node@v4.0.3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "pnpm"
