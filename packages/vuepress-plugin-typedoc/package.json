@@ -1,19 +1,19 @@
 {
+	"name": "vuepress-plugin-typedoc",
 	"description": "A VuePress plugin to build API documentation with TypeDoc.",
-	"devDependencies": {
-		"typedoc-plugin-markdown": ">=4.2.1"
-	},
 	"exports": {
 		".": "./dist/v1/index.js",
 		"./next": "./dist/v2/index.js"
 	},
+	"main": "./dist/v1/index.js",
 	"files": [
 		"dist/"
 	],
-	"main": "./dist/v1/index.js",
-	"name": "vuepress-plugin-typedoc",
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"prepublishOnly": "yarn run lint && yarn run build"
+	},
+	"devDependencies": {
+		"typedoc-plugin-markdown": ">=4.2.1"
 	}
 }
