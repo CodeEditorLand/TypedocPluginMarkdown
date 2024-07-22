@@ -1,16 +1,16 @@
 {
-	"name": "docusaurus-plugin-typedoc",
 	"description": "A Docusaurus v2 plugin to build API documentation with TypeDoc.",
-	"main": "dist/index.js",
+	"devDependencies": {
+		"typedoc-plugin-markdown": "4.2.1"
+	},
 	"files": [
 		"dist/"
 	],
+	"main": "dist/index.js",
+	"name": "docusaurus-plugin-typedoc",
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"build-and-test": "yarn run build && yarn run test",
 		"prepublishOnly": "yarn run lint && yarn run build && yarn run test"
-	},
-	"devDependencies": {
-		"typedoc-plugin-markdown": "4.2.1"
 	}
 }
