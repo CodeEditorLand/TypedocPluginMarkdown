@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@docusaurus/core": "2.2.0",
 		"@docusaurus/preset-classic": "2.2.0",
-		"clsx": "^1.2.1",
+		"clsx": "1.2.1",
 		"docusaurus-plugin-typedoc": "*",
 		"typedoc-plugin-markdown": "*"
 	},

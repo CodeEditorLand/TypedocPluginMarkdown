@@ -1,7 +1,7 @@
 {
 	"description": "An extension of the default theme from typedoc-plugin-markdown to fix Bitbucket Cloud's internal anchor linking implementation.",
 	"devDependencies": {
-		"typedoc-plugin-markdown": "^3.13.0"
+		"typedoc-plugin-markdown": "3.13.0"
 	},
 	"files": [
 		"dist/"
