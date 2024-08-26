@@ -1,6 +1,6 @@
 {
 	"devDependencies": {
-		"typedoc-plugin-markdown": "*"
+		"typedoc-plugin-markdown": "4.2.5"
 	},
 	"name": "vuepress-example-v2",
 	"scripts": {

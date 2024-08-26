@@ -15,8 +15,8 @@
 		"@docusaurus/core": "3.5.2",
 		"@docusaurus/preset-classic": "3.5.2",
 		"clsx": "2.1.1",
-		"docusaurus-plugin-typedoc": "*",
-		"typedoc-plugin-markdown": "*"
+		"docusaurus-plugin-typedoc": "1.0.5",
+		"typedoc-plugin-markdown": "4.2.5"
 	},
 	"devDependencies": {
 		"@docusaurus/module-type-aliases": "3.5.2"
