@@ -1,7 +1,7 @@
 {
 	"description": "A VuePress plugin to build API documentation with TypeDoc.",
 	"devDependencies": {
-		"typedoc-plugin-markdown": ">=4.2.6"
+		"typedoc-plugin-markdown": "4.2.6"
 	},
 	"exports": {
 		".": "./dist/v1/index.js",
