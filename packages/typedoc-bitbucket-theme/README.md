@@ -11,13 +11,13 @@ An Bitbucket Cloud compatible [TypeDoc](https://github.com/TypeStrong/typedoc) t
 
 - Fixes Bitbucket Cloud's internal anchor linking implementation.
 
-## Installation
+## 🚀 Installation
 
 ```shell
 npm install typedoc typedoc-plugin-markdown typedoc-bitbucket-theme --save-dev
 ```
 
-## Usage
+## 🛠️ Usage
 
 ```bash
 $ npx typedoc --theme --bitbucket [args]

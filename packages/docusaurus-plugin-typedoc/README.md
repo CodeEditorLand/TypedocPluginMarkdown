@@ -9,7 +9,7 @@ A [Docusaurus v2](https://v2.docusaurus.io/) plugin to build documentation with 
 
 Generates static TypeDoc pages in Markdown with frontmatter as part of the Docusaurus build.
 
-## Installation
+## 🚀 Installation
 
 > Install [Docusaurus](https://v2.docusaurus.io/docs/installation) in the root of your project and install the plugin dependencies in the same location as the Docusaurus website directory.
 
@@ -17,7 +17,7 @@ Generates static TypeDoc pages in Markdown with frontmatter as part of the Docus
 npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
 ```
 
-## Usage
+## 🛠️ Usage
 
 ### Config
 

@@ -10,13 +10,13 @@ A [Hugo](https://gohugo.io/) compatible compatible [TypeDoc](https://github.com/
 - Adds [Hugo Front Matter](https://gohugo.io/content-management/front-matter/) variables in YAML format to pages.
 - Writes `_index.md` files to folders to enable [Branch Bundles](https://gohugo.io/content-management/page-bundles/#branch-bundles).
 
-## Installation
+## 🚀 Installation
 
 ```shell
 npm install typedoc typedoc-plugin-markdown typedoc-hugo-theme --save-dev
 ```
 
-## Usage
+## 🛠️ Usage
 
 ```bash
 $ npx typedoc --theme hugo [args]

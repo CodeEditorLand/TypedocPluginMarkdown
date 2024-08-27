@@ -11,13 +11,13 @@ A [Gitlab Wiki](https://docs.gitlab.com/ee/user/project/wiki/) compatible [TypeD
 - Updates internal urls to a compatible format.
 - Writes a `_sidebar.md` file to enable custom sidebar navigation.
 
-## Installation
+## 🚀 Installation
 
 ```shell
 npm install typedoc typedoc-plugin-markdown typedoc-gitlab-wiki-theme --save-dev
 ```
 
-## Usage
+## 🛠️ Usage
 
 ```bash
 $ npx typedoc --theme gitlab-wiki [args]

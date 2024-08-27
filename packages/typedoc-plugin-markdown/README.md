@@ -11,13 +11,13 @@ The plugin replaces the default HTML theme with a built-in Markdown theme and ex
 
 Useful if documentation is required to be included in project README files, Wikis and static site generators.
 
-## Installation
+## 🚀 Installation
 
 ```bash
 npm install --save-dev typedoc typedoc-plugin-markdown
 ```
 
-## Usage
+## 🛠️ Usage
 
 Usage is the same as documented at [TypeDoc](https://typedoc.org/guides/installation/#command-line-interface).
 
