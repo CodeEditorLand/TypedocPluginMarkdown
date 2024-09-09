@@ -10,7 +10,7 @@ A [VuePress](https://vuepress.vuejs.org/) plugin to build API documentation with
 - Generates pages in Markdown as part of the build.
 - Generates sidebar configuration.
 
-## 🚀 Installation
+## Installation
 
 > Install in the same location as your VuePress project root.
 
@@ -18,7 +18,7 @@ A [VuePress](https://vuepress.vuejs.org/) plugin to build API documentation with
 npm install typedoc typedoc-plugin-markdown vuepress-plugin-typedoc --save-dev
 ```
 
-## 🛠️ Usage
+## Usage
 
 ### v1.x
 

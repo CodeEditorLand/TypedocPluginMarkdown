@@ -11,13 +11,13 @@ A [Github Wiki](https://docs.github.com/en/communities/documenting-your-project-
 - Updates internal urls to a compatible format.
 - Writes a `_Sidebar.md` file to enable custom sidebar navigation.
 
-## 🚀 Installation
+## Installation
 
 ```shell
 npm install typedoc typedoc-plugin-markdown typedoc-github-wiki-theme --save-dev
 ```
 
-### 🛠️ Usage
+### Usage
 
 ```bash
 $ npx typedoc --theme github-wiki [args]
