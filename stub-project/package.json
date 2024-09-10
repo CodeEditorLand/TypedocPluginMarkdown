@@ -1,5 +1,3 @@
 {
-  "name": "typedoc-plugin-markdown",
-  "version": "0.0.0",
-  "private": true
+	"name": "typedoc-plugin-markdown"
 }
