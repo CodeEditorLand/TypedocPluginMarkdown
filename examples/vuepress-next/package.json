@@ -1,10 +1,13 @@
 {
-	"devDependencies": {
-		"typedoc-plugin-markdown": "*"
-	},
-	"name": "vuepress-example-v2",
-	"scripts": {
-		"docs:build": "vuepress build docs && npx http-server ./docs/.vuepress/dist -o",
-		"docs:dev": "vuepress dev docs"
-	}
+  "name": "vuepress-example-v2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs && npx http-server ./docs/.vuepress/dist -o"
+  },
+  "devDependencies": {
+    "typedoc-plugin-markdown": "*",
+    "vuepress-plugin-typedoc": "*"
+  }
 }
