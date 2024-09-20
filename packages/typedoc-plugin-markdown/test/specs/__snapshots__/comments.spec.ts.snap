@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments: should allow html in comments' 1`] = `
+"<p>
+You can write <strong>HTML</strong> tags directly in comments
+</p>
+<ul>
+<li>List item</li>
+</ul>"
+`;
+
+exports[`Comments: should build @link references' 1`] = `
+"See [\`CommentClass\`](Modules.md#commentclass) and CommentClass's [comment](Modules.md#comment) property.
+Also, check out [https://www.google.com|Google](https://www.google.com|Google) and
+[GitHub](https://github.com).
+
+Taken from [JsDoc](http://usejsdoc.org/tags-inline-link.html)."
+`;
+
+exports[`Comments: should convert comments with fenced block' 1`] = `
+"Some comments with fence blocks
+
+\`\`\`typescript
+someFunction()
+\`\`\`
+
+\`\`\`js
+anotherFunction()
+\`\`\`"
+`;
+
+exports[`Comments: should convert comments with tags' 1`] = `
+"**\`Description\`**
+
+Tag description on new line
+
+- Tag description on another line
+
+**\`Deprecated\`**
+
+Another tag description
+
+Gets the application version.
+
+**\`Example\`**
+
+\`\`\`typescript
+import { getVersion } from '@tauri-apps/api/app';
+const appVersion = await getVersion();
+\`\`\`"
+`;
+
+exports[`Comments: should convert symbols brackets to symbol links' 1`] = `
+"Additionally you can link to other classes, members or functions using double square brackets.
+
+- Link to an external reflection: [CommentClass](Modules.md#commentclass)
+- Link to an internal reflection: [commentsInReturn](Modules.md#commentsinreturn)
+- Link to an undefined reflection: VOID"
+`;
