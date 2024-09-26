@@ -1,4 +1,10 @@
 {
+	"workspaces": [
+		"packages/typedoc-plugin-markdown"
+	],
+	"scripts": {
+		"build": "npm run build --workspaces"
+	},
 	"devDependencies": {
 		"@changesets/cli": "2.27.8",
 		"@types/fs-extra": "11.0.4",
@@ -10,11 +16,5 @@
 		"ts-morph": "23.0.0",
 		"typedoc": "0.26.7",
 		"typedoc-plugin-mdn-links": "3.3.1"
-	},
-	"scripts": {
-		"build": "npm run build --workspaces"
-	},
-	"workspaces": [
-		"packages/typedoc-plugin-markdown"
-	]
+	}
 }
