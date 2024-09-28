@@ -1,7 +1,13 @@
 {
 	"name": "docusaurus-plugin-typedoc",
 	"description": "A Docusaurus v2 plugin to build API documentation with TypeDoc.",
+<<<<<<< HEAD
 	"main": "dist/index.js",
+=======
+	"devDependencies": {
+		"typedoc-plugin-markdown": "4.2.8"
+	},
+>>>>>>> 5057797f5466233f3d437ad70f62fa2f376877a6
 	"files": [
 		"dist/"
 	],

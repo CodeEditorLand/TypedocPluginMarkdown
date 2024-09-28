@@ -25,13 +25,30 @@
 		]
 	},
 	"dependencies": {
-		"@docusaurus/core": "2.2.0",
-		"@docusaurus/preset-classic": "2.2.0",
-		"clsx": "^1.2.1",
+		"@docusaurus/core": "3.5.2",
+		"@docusaurus/preset-classic": "3.5.2",
+		"clsx": "2.1.1",
 		"docusaurus-plugin-typedoc": "*",
 		"typedoc-plugin-markdown": "*"
 	},
 	"devDependencies": {
+<<<<<<< HEAD
 		"@docusaurus/module-type-aliases": "2.2.0"
+=======
+		"@docusaurus/module-type-aliases": "3.5.2"
+	},
+	"name": "docusaurus",
+	"scripts": {
+		"build": "docusaurus build",
+		"clear": "docusaurus clear",
+		"deploy": "docusaurus deploy",
+		"docusaurus": "docusaurus",
+		"generate-typedoc": "docusaurus generate-typedoc",
+		"serve": "docusaurus serve",
+		"start": "docusaurus start",
+		"swizzle": "docusaurus swizzle",
+		"write-heading-ids": "docusaurus write-heading-ids",
+		"write-translations": "docusaurus write-translations"
+>>>>>>> 5057797f5466233f3d437ad70f62fa2f376877a6
 	}
 }
