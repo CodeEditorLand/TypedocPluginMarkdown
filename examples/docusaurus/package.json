@@ -1,4 +1,17 @@
 {
+	"name": "docusaurus",
+	"scripts": {
+		"build": "docusaurus build",
+		"clear": "docusaurus clear",
+		"deploy": "docusaurus deploy",
+		"docusaurus": "docusaurus",
+		"generate-typedoc": "docusaurus generate-typedoc",
+		"serve": "docusaurus serve",
+		"start": "docusaurus start",
+		"swizzle": "docusaurus swizzle",
+		"write-heading-ids": "docusaurus write-heading-ids",
+		"write-translations": "docusaurus write-translations"
+	},
 	"browserslist": {
 		"development": [
 			"last 1 chrome version",
@@ -20,18 +33,5 @@
 	},
 	"devDependencies": {
 		"@docusaurus/module-type-aliases": "2.2.0"
-	},
-	"name": "docusaurus",
-	"scripts": {
-		"build": "docusaurus build",
-		"clear": "docusaurus clear",
-		"deploy": "docusaurus deploy",
-		"docusaurus": "docusaurus",
-		"generate-typedoc": "docusaurus generate-typedoc",
-		"serve": "docusaurus serve",
-		"start": "docusaurus start",
-		"swizzle": "docusaurus swizzle",
-		"write-heading-ids": "docusaurus write-heading-ids",
-		"write-translations": "docusaurus write-translations"
 	}
 }
