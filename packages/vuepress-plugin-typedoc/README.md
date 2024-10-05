@@ -1,14 +1,15 @@
 # vuepress-plugin-typedoc
 
-A [VuePress](https://vuepress.vuejs.org/) plugin to build API documentation with [typedoc](https://github.com/TypeStrong/typedoc).
+A [VuePress](https://vuepress.vuejs.org/) plugin to build API documentation with
+[typedoc](https://github.com/TypeStrong/typedoc).
 
 [![npm](https://img.shields.io/npm/v/vuepress-plugin-typedoc.svg)](https://www.npmjs.com/package/vuepress-plugin-typedoc)
 ![CI](https://github.com/tgreyuk/typedoc-plugin-markdown/actions/workflows/ci.yml/badge.svg?branch=master)
 
 ## What it does?
 
-- Generates pages in Markdown as part of the build.
-- Generates sidebar configuration.
+-   Generates pages in Markdown as part of the build.
+-   Generates sidebar configuration.
 
 ## Installation
 
@@ -22,9 +23,12 @@ npm install typedoc typedoc-plugin-markdown vuepress-plugin-typedoc --save-dev
 
 ### v1.x
 
-- Setup a VuePress project https://v1.vuepress.vuejs.org/guide/getting-started.html.
-- Add the plugin to `.vuepress/config.js` and specify the required options (see [options](#options)).
-- TypeDoc will be bootstraped with the Vuepress `dev` and `build` [cli commands](https://vuepress.vuejs.org/api/cli.html).
+-   Setup a VuePress project
+    https://v1.vuepress.vuejs.org/guide/getting-started.html.
+-   Add the plugin to `.vuepress/config.js` and specify the required options
+    (see [options](#options)).
+-   TypeDoc will be bootstraped with the Vuepress `dev` and `build`
+    [cli commands](https://vuepress.vuejs.org/api/cli.html).
 
 #### `.vuepress/config.js`
 
@@ -44,9 +48,13 @@ plugins: [
 
 ### v2.x
 
-- Setup a VuePress v2 project https://v2.vuepress.vuejs.org/guide/getting-started.html.
-- Using a plugin via string is not supported. Import the plugin directly in `.vuepress/config.ts` under the `next` entrypoint and specify the required options (see [options](#options)).
-- TypeDoc will be bootstraped with the Vuepress `dev` and `build` [cli commands](https://v2.vuepress.vuejs.org/reference/cli.html).
+-   Setup a VuePress v2 project
+    https://v2.vuepress.vuejs.org/guide/getting-started.html.
+-   Using a plugin via string is not supported. Import the plugin directly in
+    `.vuepress/config.ts` under the `next` entrypoint and specify the required
+    options (see [options](#options)).
+-   TypeDoc will be bootstraped with the Vuepress `dev` and `build`
+    [cli commands](https://v2.vuepress.vuejs.org/reference/cli.html).
 
 #### `.vuepress/config.ts`
 
@@ -83,7 +91,8 @@ docs/ (Vuepress website root)
 
 ### TypeDoc options
 
-To configure TypeDoc, pass any relevant [TypeDoc options](https://typedoc.org/guides/options/) to the config.
+To configure TypeDoc, pass any relevant
+[TypeDoc options](https://typedoc.org/guides/options/) to the config.
 
 At a minimum the `entryPoints` and `tsconfig` options will need to be set.
 
@@ -100,14 +109,16 @@ plugin: ['typedoc-plugin-xyz'];
 
 TypeDoc options can also be declared:
 
-- Using a `typedoc.json` file.
-- Under the `typedocOptions` key in `tsconfig.json`.
+-   Using a `typedoc.json` file.
+-   Under the `typedocOptions` key in `tsconfig.json`.
 
-Note: Options declared in this manner will take priority and overwrite options declared in `docusaurus.config.js`.
+Note: Options declared in this manner will take priority and overwrite options
+declared in `docusaurus.config.js`.
 
 ### Plugin options
 
-In addition to TypeDoc options there are some custom plugin options that can be configured.
+In addition to TypeDoc options there are some custom plugin options that can be
+configured.
 
 | Name                        | Default | Description                                                                  |
 | :-------------------------- | :------ | :--------------------------------------------------------------------------- |

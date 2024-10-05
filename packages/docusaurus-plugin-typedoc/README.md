@@ -1,17 +1,21 @@
 # docusaurus-plugin-typedoc
 
-A [Docusaurus v2](https://v2.docusaurus.io/) plugin to build documentation with [TypeDoc](https://github.com/TypeStrong/typedoc).
+A [Docusaurus v2](https://v2.docusaurus.io/) plugin to build documentation with
+[TypeDoc](https://github.com/TypeStrong/typedoc).
 
 [![npm](https://img.shields.io/npm/v/docusaurus-plugin-typedoc.svg)](https://www.npmjs.com/package/docusaurus-plugin-typedoc)
 ![CI](https://github.com/tgreyuk/typedoc-plugin-markdown/actions/workflows/ci.yml/badge.svg?branch=master)
 
 ## What it does?
 
-Generates static TypeDoc pages in Markdown with frontmatter as part of the Docusaurus build.
+Generates static TypeDoc pages in Markdown with frontmatter as part of the
+Docusaurus build.
 
 ## Installation
 
-> Install [Docusaurus](https://v2.docusaurus.io/docs/installation) in the root of your project and install the plugin dependencies in the same location as the Docusaurus website directory.
+> Install [Docusaurus](https://v2.docusaurus.io/docs/installation) in the root
+> of your project and install the plugin dependencies in the same location as
+> the Docusaurus website directory.
 
 ```shell
 npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
@@ -21,7 +25,8 @@ npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
 
 ### Config
 
-Add the plugin to `docusaurus.config.js` and specify the required options (see [options](#options)).
+Add the plugin to `docusaurus.config.js` and specify the required options (see
+[options](#options)).
 
 ```js
 module.exports = {
@@ -39,14 +44,16 @@ module.exports = {
 };
 ```
 
-TypeDoc will be bootstraped with the Docusaurus `start` and `build` [cli commands](https://v2.docusaurus.io/docs/cli):
+TypeDoc will be bootstraped with the Docusaurus `start` and `build`
+[cli commands](https://v2.docusaurus.io/docs/cli):
 
 ```javascript
 "start": "docusaurus start",
 "build": "docusaurus build",
 ```
 
-Once built the docs will be available at `/docs/api` (or equivalent out directory).
+Once built the docs will be available at `/docs/api` (or equivalent out
+directory).
 
 ### Directory structure
 
@@ -67,7 +74,8 @@ Once built the docs will be available at `/docs/api` (or equivalent out director
 
 ### TypeDoc options
 
-To configure TypeDoc, pass any relevant [TypeDoc options](https://typedoc.org/guides/options/) to the config.
+To configure TypeDoc, pass any relevant
+[TypeDoc options](https://typedoc.org/guides/options/) to the config.
 
 At a minimum the `entryPoints` and `tsconfig` options will need to be set.
 
@@ -86,10 +94,11 @@ plugin: ['typedoc-plugin-xyz'];
 
 TypeDoc options can also be declared:
 
-- Using a `typedoc.json` file.
-- Under the `typedocOptions` key in `tsconfig.json`.
+-   Using a `typedoc.json` file.
+-   Under the `typedocOptions` key in `tsconfig.json`.
 
-> Note: Options declared in this manner will take priority and overwrite options declared in `docusaurus.config.js`.
+> Note: Options declared in this manner will take priority and overwrite options
+> declared in `docusaurus.config.js`.
 
 ### Plugin options
 
@@ -138,7 +147,8 @@ module.exports = {
 
 `sidebars.js` can be configured in following ways:
 
-1. Generate the entire sidebar from file structure of your docs folder (default behaviour):
+1. Generate the entire sidebar from file structure of your docs folder (default
+   behaviour):
 
 ```js
 module.exports = {
@@ -151,9 +161,11 @@ module.exports = {
 };
 ```
 
-2. Alternatively, if you wish to manually control other parts of your sidebar you can use a slice for the TypeDoc sidebar.
+2. Alternatively, if you wish to manually control other parts of your sidebar
+   you can use a slice for the TypeDoc sidebar.
 
-> note: `sidebar.categoryLabel` and `sidebar.position` options are ignored with this implementation)
+> note: `sidebar.categoryLabel` and `sidebar.position` options are ignored with
+> this implementation)
 
 ```js
 module.exports = {
@@ -173,7 +185,8 @@ Please see https://docusaurus.io/docs/sidebar for sidebar documentation.
 
 #### Navbar
 
-A navbar item can be configured in `themeConfig` options in `docusaurus.config.js`:
+A navbar item can be configured in `themeConfig` options in
+`docusaurus.config.js`:
 
 ```js
  themeConfig: {
@@ -190,12 +203,15 @@ A navbar item can be configured in `themeConfig` options in `docusaurus.config.j
 },
 ```
 
-Please see https://docusaurus.io/docs/api/themes/configuration#navbar-items for navbar documentation.
+Please see https://docusaurus.io/docs/api/themes/configuration#navbar-items for
+navbar documentation.
 
 ### Frontmatter
 
-By default the plugin will configure minimal required [Frontmatter](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter) configuration.
-Additionally required global Frontmatter options can be passed in using the `frontmatter` options object
+By default the plugin will configure minimal required
+[Frontmatter](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter)
+configuration. Additionally required global Frontmatter options can be passed in
+using the `frontmatter` options object
 
 `docusaurus.config.js`:
 
@@ -215,7 +231,8 @@ plugins: [
 
 ### Multi instance
 
-It is possible to build multi TypeDoc instances by passing in multiple configs with unique ids:
+It is possible to build multi TypeDoc instances by passing in multiple configs
+with unique ids:
 
 `docusaurus.config.js`
 
@@ -246,9 +263,11 @@ module.exports = {
 
 ### Watch mode
 
-Watching files is supported by passing in the `watch: true` option see [https://typedoc.org/guides/options/#watch](https://typedoc.org/guides/options/#watch).
+Watching files is supported by passing in the `watch: true` option see
+[https://typedoc.org/guides/options/#watch](https://typedoc.org/guides/options/#watch).
 
-Targetting the option in development mode only can be achieved using Node.js Environment Variables:
+Targetting the option in development mode only can be achieved using Node.js
+Environment Variables:
 
 `package.json`
 
