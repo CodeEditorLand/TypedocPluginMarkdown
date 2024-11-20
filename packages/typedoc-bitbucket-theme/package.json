@@ -1,16 +1,16 @@
 {
-	"name": "typedoc-bitbucket-theme",
 	"description": "An extension of the default theme from typedoc-plugin-markdown to fix Bitbucket Cloud's internal anchor linking implementation.",
-	"main": "dist/index.js",
+	"devDependencies": {
+		"typedoc-plugin-markdown": "4.2.10"
+	},
 	"files": [
 		"dist/"
 	],
+	"main": "dist/index.js",
+	"name": "typedoc-bitbucket-theme",
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"demo": "rm -rf ./demo && yarn run build && typedoc --options ../typedoc-plugin-markdown/demo.options.json  --tsconfig ../typedoc-plugin-markdown/test/stubs/tsconfig.json --theme bitbucket --out ./demo",
 		"prepublishOnly": "npm run lint && npm run build"
-	},
-	"devDependencies": {
-		"typedoc-plugin-markdown": "4.2.10"
 	}
 }
