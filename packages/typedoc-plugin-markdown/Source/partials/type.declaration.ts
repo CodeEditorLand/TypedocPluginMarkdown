@@ -14,7 +14,9 @@ export function declarationType(
 
   if (declarationReflection.indexSignature || declarationReflection.children) {
     let indexSignature = '';
+
     const declarationIndexSignature = declarationReflection.indexSignature;
+
     if (declarationIndexSignature) {
       const key = declarationIndexSignature.parameters
         ? declarationIndexSignature.parameters.map(
@@ -37,6 +39,7 @@ export function declarationType(
             : ''
         }`;
       });
+
     return `{ ${indexSignature ? indexSignature : ''}${
       types ? types.join('; ') : ''
     } }${

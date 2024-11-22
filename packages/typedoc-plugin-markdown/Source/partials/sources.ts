@@ -50,6 +50,7 @@ export function sources(
 
   if (reflection.sources) {
     const sources: string[] = [];
+
     if (reflection.sources.length > 1) {
       sources.push(bold('Defined in') + ' \n\n');
     } else if (!reflectionTable.includes(reflection.kind)) {
@@ -88,6 +89,7 @@ const typeAndParent = (
     } else {
       if (props.reflection) {
         const md: string[] = [];
+
         if (props.reflection instanceof SignatureReflection) {
           if (props.reflection.parent?.parent?.url) {
             md.push(
@@ -96,6 +98,7 @@ const typeAndParent = (
                 props.reflection.parent.parent.url,
               ),
             );
+
             if (props.reflection.parent.url) {
               md.push(
                 getUrl(
@@ -110,6 +113,7 @@ const typeAndParent = (
             md.push(
               getUrl(props.reflection.parent.name, props.reflection.parent.url),
             );
+
             if (props.reflection.url) {
               md.push(getUrl(props.reflection.name, props.reflection.url));
             }

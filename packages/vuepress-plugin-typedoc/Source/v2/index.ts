@@ -10,6 +10,7 @@ import { PluginOptions } from '../shared/types';
 import { getSidebarJson } from './sidebar';
 
 let app: Application;
+
 let project: ProjectReflection | undefined;
 
 export const typedocPlugin = (opts: Partial<PluginOptions>) => {
@@ -52,6 +53,7 @@ export const typedocPlugin = (opts: Partial<PluginOptions>) => {
 
       extendsPageOptions: (pageOptions: any) => {
         const sidebarOptions = getSidebarOptions(opts);
+
         if (!sidebarOptions.autoConfiguration) {
           return;
         }

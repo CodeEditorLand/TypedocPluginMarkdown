@@ -11,6 +11,7 @@ export function functionType(
           .map((typeParameter) => typeParameter.name)
           .join(', ')}\\>`
       : [];
+
     const params = fn.parameters
       ? fn.parameters.map((param) => {
           return `${param.flags.isRest ? '...' : ''}\`${param.name}${
@@ -18,7 +19,9 @@ export function functionType(
           }\`: ${context.partials.someType(param.type as SomeType)}`;
         })
       : [];
+
     const returns = context.partials.someType(fn.type as SomeType);
+
     return typeParams + `(${params.join(', ')}) => ${returns}`;
   });
   return functions.join('');

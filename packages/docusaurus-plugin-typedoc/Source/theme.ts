@@ -9,6 +9,7 @@ export class DocusaurusTheme extends MarkdownTheme {
   override getUrls(project: ProjectReflection): UrlMapping<any>[] {
     console.log('GET URLS');
     // console.log(super.getUrls(project));
+
     return super.getUrls(project);
   }
 }

@@ -33,6 +33,7 @@ export function toc(
     (isVisible && reflection.groups)
   ) {
     const headingLevel = getSecondaryHeadingLevel(reflection);
+
     if (!hideInPageTOC) {
       md.push(heading(headingLevel, 'Index') + '\n\n');
     }

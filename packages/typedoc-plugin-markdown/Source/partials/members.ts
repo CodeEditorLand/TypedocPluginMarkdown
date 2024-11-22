@@ -23,6 +23,7 @@ export function members(
       ?.filter((group) => !group.allChildrenHaveOwnDocument())
       .forEach((group, groupIndex) => {
         const headingLevel = getSecondaryHeadingLevel(container);
+
         if (group.categories) {
           group.categories.forEach((groupItem) =>
             groupItem.children.forEach((item) => {
@@ -63,6 +64,7 @@ export function members(
               .filter((item) => !item.hasOwnDocument)
               .forEach((groupChild, index) => {
                 md.push(context.partials.member(groupChild));
+
                 if (index !== group.children.length - 1) {
                   md.push(horizontalRule(context));
                 }

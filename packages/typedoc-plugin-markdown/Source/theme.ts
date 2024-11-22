@@ -71,6 +71,7 @@ export class MarkdownTheme extends Theme {
     const urls: UrlMapping[] = [];
 
     const noReadmeFile = this.readme.endsWith('none');
+
     if (noReadmeFile) {
       project.url = this.entryDocument;
       urls.push(
@@ -203,6 +204,7 @@ export class MarkdownTheme extends Theme {
         template: this.reflectionTemplate,
       },
     };
+
     if (hasOwnDocument.includes('all') || hasOwnDocument.includes('class')) {
       mappings[ReflectionKind.Class] = {
         isLeaf: false,

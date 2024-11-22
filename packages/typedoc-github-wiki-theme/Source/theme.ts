@@ -25,7 +25,9 @@ export class GithubWikiTheme extends MarkdownTheme {
   writeSidebar(renderer: any) {
     const parseUrl = (url: string) => '../wiki/' + url.replace('.md', '');
     //const navigation = this.getNavigation(renderer.project);
+
     const navJson: string[] = [`## ${renderer.project.name}\n`];
+
     const allowedSections = ['Home', 'Modules', 'Namespaces'];
     /*navigation.children
       ?.filter(
@@ -37,6 +39,7 @@ export class GithubWikiTheme extends MarkdownTheme {
           navJson.push(`\n### ${navItem.title}\n`);
           navItem.children?.forEach((navItemChild) => {
             const longTitle = navItemChild.title.split('.');
+
             const shortTitle = longTitle[longTitle.length - 1];
             navJson.push(
               `- [${shortTitle}](${parseUrl(encodeURI(navItemChild.url))})`,

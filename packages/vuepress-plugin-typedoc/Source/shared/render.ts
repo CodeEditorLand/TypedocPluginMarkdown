@@ -27,6 +27,7 @@ export async function render(
 export function removeDir(path: string) {
   if (fs.existsSync(path)) {
     const files = fs.readdirSync(path);
+
     if (files.length > 0) {
       files.forEach(function (filename) {
         if (fs.statSync(path + '/' + filename).isDirectory()) {

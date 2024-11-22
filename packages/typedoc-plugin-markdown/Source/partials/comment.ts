@@ -27,6 +27,7 @@ export function comment(context: MarkdownThemeRenderContext, comment: Comment) {
             );
             history.push(context.partials.commentParts(tag.content));
             history.push('</details>');
+
             return history.join('\n\n');
           default:
             return `${bold(

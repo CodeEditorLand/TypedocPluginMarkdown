@@ -14,6 +14,7 @@ export function parametersTable(
           ...child,
           name: `${current.name}.${child.name}`,
         };
+
         return parseParams(childObj, acc);
       },
       [],
@@ -24,6 +25,7 @@ export function parametersTable(
     const shouldFlatten =
       current.type?.declaration?.kind === ReflectionKind.TypeLiteral &&
       current.type?.declaration?.children;
+
     return shouldFlatten
       ? [...acc, current, ...flattenParams(current)]
       : [...acc, current];
@@ -61,9 +63,11 @@ function table(context: MarkdownThemeRenderContext, parameters: any) {
 
     const nbsp = ' '; // ? <== Unicode no-break space character
     const rest = parameter.flags.isRest ? '...' : '';
+
     const optional = parameter.flags.isOptional ? '?' : '';
 
     const isDestructuredParam = parameter.name == '__namedParameters';
+
     const isDestructuredParamProp =
       parameter.name.startsWith('__namedParameters.');
 

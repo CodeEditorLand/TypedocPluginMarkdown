@@ -40,9 +40,11 @@ const project = new Project({
 const themePath = path.join(__dirname, '..', 'src');
 
 const templateFiles = getFiles('templates');
+
 const templateSymbols = getSymbols(templateFiles, 'templates');
 
 const partialsFiles = getFiles('partials');
+
 const partialsSymbols = getSymbols(partialsFiles, 'partials');
 
 const out = [
@@ -115,6 +117,7 @@ function getSymbols(files: string[], type: string) {
     );
 
     const symbolName = tsFile?.getExportSymbols()[0]?.getEscapedName();
+
     const fn = tsFile?.getFunction(symbolName as string);
 
     const params = fn
@@ -127,15 +130,20 @@ function getSymbols(files: string[], type: string) {
           .split('|')
           .map((unions) => {
             const union = unions.split('.');
+
             if (union[1] && union[1].startsWith('PageEvent')) {
               return `PageEvent<${union[union.length - 1]}`;
             }
             return union[union.length - 1];
           });
+
         const name = parameter.getName();
+
         const isOptional = parameter.isOptional();
+
         return { name, type: typeunions.join('| '), isOptional };
       });
+
     return { symbolName, params };
   });
 }

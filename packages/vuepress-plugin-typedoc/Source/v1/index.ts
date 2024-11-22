@@ -13,6 +13,7 @@ import { PluginOptions } from '../shared/types';
 import { getSidebarJson } from './sidebar';
 
 let app: Application;
+
 let project: ProjectReflection | undefined;
 
 export = (opts: Partial<PluginOptions>, ctx: any) => {

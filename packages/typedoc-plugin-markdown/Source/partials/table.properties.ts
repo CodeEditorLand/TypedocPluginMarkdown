@@ -29,6 +29,7 @@ export function propertiesTable(
           ...child,
           name: `${current.name}.${child.name}`,
         };
+
         return parseParams(childObj, acc);
       },
       [],
@@ -50,8 +51,11 @@ export function propertiesTable(
 
   const rows = properties.map((property) => {
     const propertyType = getPropertyType(property);
+
     const row: string[] = [];
+
     const nameCol: string[] = [];
+
     const name =
       property.name.match(/[\\`\\|]/g) !== null
         ? escapeChars(getName(context, property))

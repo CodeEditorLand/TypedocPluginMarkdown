@@ -42,6 +42,7 @@ export class HugoTheme extends MarkdownTheme {
 
   private onHugoRendererEnd(renderer: RendererEvent) {
     const theme = this.application.renderer.theme as MarkdownTheme;
+
     const navigation = theme.getNavigation(renderer.project);
 
     if (navigation.children) {
@@ -81,6 +82,7 @@ export class HugoTheme extends MarkdownTheme {
     const slug = page.url.replace(/\.[^.$]+$/, '');
     // Only use the last part of the slug, because the folder is used to make URL
     let slugEnd = slug.split('/').pop();
+
     if (slugEnd === undefined) {
       slugEnd = slug;
     }

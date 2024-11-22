@@ -13,6 +13,7 @@ import {
 import { MarkdownTheme } from 'typedoc-plugin-markdown';
 
 const STUBS_SRC_PATH = path.join(__dirname, 'stub-project', 'src');
+
 const STUBS_TSCONFIG_PATH = path.join(
   __dirname,
   'stub-project',

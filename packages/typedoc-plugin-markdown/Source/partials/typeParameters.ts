@@ -12,6 +12,7 @@ export function typeParameters(
       md.push(item.varianceModifier);
     }
     md.push(`- ${backTicks(item.name)}`);
+
     if (!!item.type) {
       md.push(` *extends* ${context.partials.someType(item.type)}`);
     }

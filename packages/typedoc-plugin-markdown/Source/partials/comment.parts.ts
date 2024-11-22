@@ -11,6 +11,7 @@ export function commentParts(
       case 'text':
       case 'code':
         md.push(part.text);
+
         break;
       case 'inline-tag':
         switch (part.tag) {
@@ -34,6 +35,7 @@ export function commentParts(
           }
           default:
             md.push(`{${part.tag} ${part.text}}`);
+
             break;
         }
         break;

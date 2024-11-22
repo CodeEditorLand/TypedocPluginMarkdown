@@ -34,7 +34,9 @@ export function signatureTitle(
     return parameters
       .map((param) => {
         const isDestructuredParam = param.name == '__namedParameters';
+
         const paramsmd: string[] = [];
+
         if (param.flags.isRest) {
           paramsmd.push('...');
         }
@@ -44,6 +46,7 @@ export function signatureTitle(
           param.flags.isOptional || param.defaultValue ? '?' : ''
         }\`: ${context.partials.someType(param.type as SomeType, 'all')}`;
         paramsmd.push(paramItem);
+
         return paramsmd.join('');
       })
       .join(', ');
