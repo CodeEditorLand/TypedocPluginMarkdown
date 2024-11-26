@@ -12,14 +12,14 @@
 		]
 	},
 	"dependencies": {
-		"@docusaurus/core": "3.6.2",
-		"@docusaurus/preset-classic": "3.6.2",
+		"@docusaurus/core": "3.6.3",
+		"@docusaurus/preset-classic": "3.6.3",
 		"clsx": "2.1.1",
 		"docusaurus-plugin-typedoc": "*",
 		"typedoc-plugin-markdown": "*"
 	},
 	"devDependencies": {
-		"@docusaurus/module-type-aliases": "3.6.2"
+		"@docusaurus/module-type-aliases": "3.6.3"
 	},
 	"name": "docusaurus",
 	"scripts": {
