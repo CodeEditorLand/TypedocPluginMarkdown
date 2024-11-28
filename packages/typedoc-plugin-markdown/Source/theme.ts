@@ -14,6 +14,7 @@ import { HasOwnDocument, TemplateMapping } from './models';
 import { URL_PREFIX } from './support/constants';
 import { formatContents } from './support/utils';
 import { MarkdownThemeRenderContext } from './theme-context';
+
 export class MarkdownTheme extends Theme {
   @BindOption('entryDocument') entryDocument!: string;
   @BindOption('entryPoints') entryPoints!: string[];

@@ -33,7 +33,9 @@ export function functionWithGenericConstraints<Type, Key extends keyof Type>(
 }
 
 export type Generic1<T> = Generic2<Generic3<T>>;
+
 export type Generic2<T> = T;
+
 export type Generic3<T> = T;
 
 export type nestedGenerics = Generic1<Generic2<Generic3<string>>>;

@@ -7,6 +7,7 @@ export interface InterfaceItemB {
 }
 
 export let declarationItemA: string;
+
 export let declarationItemB: string;
 
 export class ClassItemB {}
