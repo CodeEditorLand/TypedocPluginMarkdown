@@ -88,6 +88,7 @@ function table(context: MarkdownThemeRenderContext, parameters: any) {
     if (showDefaults) {
       row.push(getDefaultValue(parameter));
     }
+
     if (hasComments) {
       if (parameter.comment) {
         row.push(
@@ -100,6 +101,7 @@ function table(context: MarkdownThemeRenderContext, parameters: any) {
         row.push('-');
       }
     }
+
     return `| ${row.join(' | ')} |\n`;
   });
 

@@ -73,6 +73,7 @@ async function render(project: ProjectReflection, outputDirectory: string) {
       this.trigger(PageEvent.BEGIN, page);
       this.trigger(PageEvent.END, page);
     });
+
     this.trigger(RendererEvent.END, output);
   }
 }

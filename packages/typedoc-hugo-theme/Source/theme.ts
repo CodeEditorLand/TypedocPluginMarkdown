@@ -19,7 +19,9 @@ export class HugoTheme extends MarkdownTheme {
     super(renderer);
 
     this.entryDocument = '_index.md';
+
     this.hideBreadcrumbs = true;
+
     this.hidePageTitle = true;
 
     this.listenTo(this.owner, {
@@ -72,9 +74,11 @@ export class HugoTheme extends MarkdownTheme {
         ? this.indexTitle || page.model.name
         : 'Readme';
     }
+
     if (page.url === 'modules.md' && this.indexTitle) {
       return this.indexTitle;
     }
+
     return linkTitle ? page.model.name : getPageTitle(page);
   }
 
@@ -86,6 +90,7 @@ export class HugoTheme extends MarkdownTheme {
     if (slugEnd === undefined) {
       slugEnd = slug;
     }
+
     return slugEnd;
   }
 }

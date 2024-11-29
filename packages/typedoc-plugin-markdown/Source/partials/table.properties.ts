@@ -60,10 +60,13 @@ export function propertiesTable(
       property.name.match(/[\\`\\|]/g) !== null
         ? escapeChars(getName(context, property))
         : `\`${getName(context, property)}\``;
+
     nameCol.push(
       `<div class="anchor-with-padding" id="${property.getFriendlyFullName()}"><a href="#${property.getFriendlyFullName()}">${name}</a></div>`,
     );
+
     row.push(nameCol.join(' '));
+
     row.push(
       context.partials.someType(propertyType).replace(/(?<!\\)\|/g, '\\|'),
     );
@@ -94,6 +97,7 @@ export function propertiesTable(
         row.push('-');
       }
     }
+
     return `| ${row.join(' | ')} |\n`;
   });
 

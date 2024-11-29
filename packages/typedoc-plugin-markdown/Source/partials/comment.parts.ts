@@ -31,6 +31,7 @@ export function commentParts(
             } else {
               md.push(part.text);
             }
+
             break;
           }
           default:
@@ -38,6 +39,7 @@ export function commentParts(
 
             break;
         }
+
         break;
       default:
         md.push('');

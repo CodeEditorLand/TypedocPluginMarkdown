@@ -26,6 +26,7 @@ export function referenceType(
           : backTicks(referenceType.name),
       );
     }
+
     if (referenceType.typeArguments && referenceType.typeArguments.length > 0) {
       reflection.push(
         `<${referenceType.typeArguments
@@ -33,6 +34,7 @@ export function referenceType(
           .join(', ')}\\>`,
       );
     }
+
     return reflection.join('');
   }
   return referenceType.externalUrl

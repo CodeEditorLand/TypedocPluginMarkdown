@@ -56,6 +56,7 @@ export function member(
         if (reflection.getSignature) {
           md.push(context.partials.signatureMember(reflection.getSignature));
         }
+
         if (reflection.setSignature) {
           md.push(context.partials.signatureMember(reflection.setSignature));
         }

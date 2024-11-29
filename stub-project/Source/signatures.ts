@@ -195,7 +195,9 @@ export function functionWithReferenceType(
 export function functionWithNestedParams(
   params: {
     name: string;
+
     parent?: number;
+
     nestedObj: {
       name: string;
       value: number;

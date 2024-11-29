@@ -119,6 +119,7 @@ const typeAndParent = (
             }
           }
         }
+
         return md.length > 0 ? md.join('.') : props.name;
       } else {
         return escapeChars(props.toString());

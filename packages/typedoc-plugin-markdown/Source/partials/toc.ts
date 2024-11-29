@@ -25,6 +25,7 @@ export function toc(
       (child) =>
         `- [${escapeChars(child.name)}](${context.relativeURL(child.url)})`,
     );
+
     md.push(children.join('\n'));
   }
 
@@ -37,6 +38,7 @@ export function toc(
     if (!hideInPageTOC) {
       md.push(heading(headingLevel, 'Index') + '\n\n');
     }
+
     reflection.groups?.forEach((group) => {
       const groupTitle = group.title;
       if (group.categories) {

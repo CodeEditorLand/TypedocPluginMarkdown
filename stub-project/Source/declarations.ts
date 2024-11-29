@@ -50,7 +50,9 @@ export let typeLiteralDeclaration: {
      * Nested comment for valueZ
      */
     valueZ: string;
+
     valueY: { (z: string): { a: string; b: string } };
+
     valueA: number[];
   };
   /**

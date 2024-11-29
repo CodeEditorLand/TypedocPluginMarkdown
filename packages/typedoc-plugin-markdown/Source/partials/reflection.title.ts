@@ -15,6 +15,7 @@ export function reflectionTitle(
     const typeParameters = reflection.typeParameters
       .map((typeParameter) => typeParameter.name)
       .join(', ');
+
     md.push(`<${typeParameters}${shouldEscape ? '\\>' : '>'}`);
   }
 

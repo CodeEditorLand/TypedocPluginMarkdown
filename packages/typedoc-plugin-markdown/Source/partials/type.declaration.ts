@@ -28,6 +28,7 @@ export function declarationType(
       );
       indexSignature = `${key}: ${obj}; `;
     }
+
     const types =
       declarationReflection.children &&
       declarationReflection.children.map((obj) => {

@@ -41,6 +41,7 @@ export class GithubWikiTheme extends MarkdownTheme {
             const longTitle = navItemChild.title.split('.');
 
             const shortTitle = longTitle[longTitle.length - 1];
+
             navJson.push(
               `- [${shortTitle}](${parseUrl(encodeURI(navItemChild.url))})`,
             );

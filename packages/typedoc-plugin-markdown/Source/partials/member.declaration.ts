@@ -23,6 +23,7 @@ export function declarationMember(
 
   if (reflection.typeParameters) {
     md.push(bold('Type parameters'));
+
     md.push(context.partials.typeParameters(reflection.typeParameters));
   }
 
@@ -34,6 +35,7 @@ export function declarationMember(
     md.push(
       bold(typeDeclaration.children ? 'Call signature' : 'Type declaration'),
     );
+
     typeDeclaration.signatures.forEach((signature) => {
       md.push(context.partials.signatureMember(signature));
     });
@@ -41,6 +43,7 @@ export function declarationMember(
 
   if (typeDeclaration?.children) {
     md.push(bold('Type declaration'));
+
     md.push(context.partials.propertiesTable(typeDeclaration.children));
   }
 

@@ -32,7 +32,9 @@ export let literalType: {
   valueY: { (): string };
   valueX: {
     valueZ: string;
+
     valueY: { (z: string): { a: string; b: string } };
+
     valueA: number[];
   };
   valueA?: number;

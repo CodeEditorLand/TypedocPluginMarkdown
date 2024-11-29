@@ -16,6 +16,7 @@ export function header(
     const prefix = !page.model.kindOf(ReflectionKind.SomeModule)
       ? `${page.model.kindString}: `
       : '';
+
     md.push(
       heading(1, prefix + context.partials.reflectionTitle(page.model, true)),
     );

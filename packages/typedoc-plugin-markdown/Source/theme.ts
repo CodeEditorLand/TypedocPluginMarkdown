@@ -32,6 +32,7 @@ export class MarkdownTheme extends Theme {
     super(renderer);
 
     this.mappings = this.getMappingsMap(this.hasOwnDocument);
+
     this.anchors = {};
 
     this.listenTo(this.owner, {
@@ -45,6 +46,7 @@ export class MarkdownTheme extends Theme {
         this.application.options,
       );
     }
+
     return this._renderContext;
   }
 
@@ -137,8 +139,11 @@ export class MarkdownTheme extends Theme {
         }
 
         const url = friendlyFragments.join('/') + '.md';
+
         urls.push(new UrlMapping(url, reflection, mapping.template));
+
         reflection.url = url;
+
         reflection.hasOwnDocument = true;
       }
 
@@ -152,6 +157,7 @@ export class MarkdownTheme extends Theme {
     } else if (reflection.parent) {
       this.applyAnchorUrl(reflection, reflection.parent /*true*/);
     }
+
     return urls;
   }
 
@@ -185,6 +191,7 @@ export class MarkdownTheme extends Theme {
       reflection.anchor = anchor;
       reflection.hasOwnDocument = false;
     }
+
     reflection.traverse((child) => {
       if (child instanceof DeclarationReflection) {
         this.applyAnchorUrl(child, container);
@@ -213,6 +220,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Classes',
       };
     }
+
     if (
       hasOwnDocument.includes('all') ||
       hasOwnDocument.includes('interface')
@@ -223,6 +231,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Interfaces',
       };
     }
+
     if (hasOwnDocument.includes('all') || hasOwnDocument.includes('enum')) {
       mappings[ReflectionKind.Enum] = {
         isLeaf: false,
@@ -230,6 +239,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Enums',
       };
     }
+
     if (hasOwnDocument.includes('all') || hasOwnDocument.includes('function')) {
       mappings[ReflectionKind.Function] = {
         isLeaf: true,
@@ -237,6 +247,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Functions',
       };
     }
+
     if (hasOwnDocument.includes('all') || hasOwnDocument.includes('type')) {
       mappings[ReflectionKind.TypeAlias] = {
         isLeaf: true,
@@ -244,6 +255,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Types',
       };
     }
+
     if (hasOwnDocument.includes('all') || hasOwnDocument.includes('variable')) {
       mappings[ReflectionKind.Variable] = {
         isLeaf: true,
@@ -251,6 +263,7 @@ export class MarkdownTheme extends Theme {
         directory: 'Variables',
       };
     }
+
     return mappings;
   }
 

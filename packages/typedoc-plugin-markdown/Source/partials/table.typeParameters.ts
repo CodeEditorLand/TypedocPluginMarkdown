@@ -45,6 +45,7 @@ function table(context: MarkdownThemeRenderContext, parameters: any) {
       }
       if (!!parameter.default) {
         typeCol.push(' = ');
+
         typeCol.push(context.partials.someType(parameter.default));
       }
       row.push(typeCol.join(''));
@@ -61,6 +62,7 @@ function table(context: MarkdownThemeRenderContext, parameters: any) {
         row.push('-');
       }
     }
+
     return `| ${row.join(' | ')} |`;
   });
 

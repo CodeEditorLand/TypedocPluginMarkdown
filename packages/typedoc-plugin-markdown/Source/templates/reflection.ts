@@ -16,6 +16,7 @@ export function reflectionTemplate(
 
   if (page.model.typeParameters) {
     md.push(bold('Type parameters'));
+
     md.push(context.partials.typeParameters(page.model.typeParameters));
   }
 
@@ -27,6 +28,7 @@ export function reflectionTemplate(
   }
   if (page.model?.implementedTypes) {
     md.push(bold('Implements'));
+
     md.push(
       unorderedList(
         page.model.implementedTypes.map((implementedType) =>
@@ -38,6 +40,7 @@ export function reflectionTemplate(
 
   if ('signatures' in page.model && page.model?.signatures) {
     md.push(heading(2, 'Callable'));
+
     page.model.signatures.forEach((signature) => {
       md.push(heading(3, signature.name));
       md.push(context.partials.signatureMember(signature));

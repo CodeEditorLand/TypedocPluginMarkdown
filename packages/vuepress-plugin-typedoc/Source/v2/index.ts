@@ -57,6 +57,7 @@ export const typedocPlugin = (opts: Partial<PluginOptions>) => {
         if (!sidebarOptions.autoConfiguration) {
           return;
         }
+
         if (pageOptions.filePath?.startsWith(outputDirectory)) {
           const theme = app.renderer.theme as any;
           const navigation = theme.getNavigation(project);

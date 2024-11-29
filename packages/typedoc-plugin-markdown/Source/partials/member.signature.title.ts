@@ -40,11 +40,13 @@ export function signatureTitle(
         if (param.flags.isRest) {
           paramsmd.push('...');
         }
+
         const paramItem = `\`${
           isDestructuredParam ? '«destructured»' : param.name
         }${
           param.flags.isOptional || param.defaultValue ? '?' : ''
         }\`: ${context.partials.someType(param.type as SomeType, 'all')}`;
+
         paramsmd.push(paramItem);
 
         return paramsmd.join('');

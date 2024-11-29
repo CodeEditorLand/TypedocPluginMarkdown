@@ -134,6 +134,7 @@ function getSymbols(files: string[], type: string) {
             if (union[1] && union[1].startsWith('PageEvent')) {
               return `PageEvent<${union[union.length - 1]}`;
             }
+
             return union[union.length - 1];
           });
 

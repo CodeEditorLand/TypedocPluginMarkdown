@@ -29,6 +29,7 @@ export class MarkdownThemeRenderContext {
     if (!url) {
       return null;
     }
+
     if (URL_PREFIX.test(url)) {
       return url;
     } else {

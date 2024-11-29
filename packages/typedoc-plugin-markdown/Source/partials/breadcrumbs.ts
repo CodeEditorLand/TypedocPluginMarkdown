@@ -34,6 +34,7 @@ export function breadcrumbs(
             )})`,
           );
         }
+
         md.push(
           `[${page.model.parent.name}](${context.relativeURL(
             page.model.parent.url,

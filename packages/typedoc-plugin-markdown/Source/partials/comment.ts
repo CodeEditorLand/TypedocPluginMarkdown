@@ -21,11 +21,15 @@ export function comment(context: MarkdownThemeRenderContext, comment: Comment) {
             )}: ${context.partials.commentParts(tag.content)}`;
           case '@history':
             const history: string[] = [];
+
             history.push('<details>');
+
             history.push(
               `<summary>${camelToTitleCase(tag.tag.substring(1))}</summary>`,
             );
+
             history.push(context.partials.commentParts(tag.content));
+
             history.push('</details>');
 
             return history.join('\n\n');
@@ -35,6 +39,7 @@ export function comment(context: MarkdownThemeRenderContext, comment: Comment) {
             )}\n\n${context.partials.commentParts(tag.content)}`;
         }
       });
+
     md.push(tags.join('\n\n'));
   }
 

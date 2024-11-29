@@ -11,17 +11,21 @@ export function typeParameters(
     if (item.varianceModifier) {
       md.push(item.varianceModifier);
     }
+
     md.push(`- ${backTicks(item.name)}`);
 
     if (!!item.type) {
       md.push(` *extends* ${context.partials.someType(item.type)}`);
     }
+
     if (!!item.default) {
       md.push(` = ${context.partials.someType(item.default)}`);
     }
+
     if (item.comment) {
       md.push(context.partials.comment(item.comment));
     }
+
     md.push('\n');
   });
   return md.join('');

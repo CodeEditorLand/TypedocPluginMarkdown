@@ -22,11 +22,13 @@ export function signatureMember(
 
   if (signature.typeParameters?.length) {
     md.push(bold('Type parameters'));
+
     md.push(context.partials.typeParameters(signature.typeParameters));
   }
 
   if (signature.parameters?.length) {
     md.push(bold('Parameters'));
+
     md.push(context.partials.parametersTable(signature.parameters));
   }
 
