@@ -1,20 +1,20 @@
 {
-	"dependencies": {},
+	"name": "typedoc-plugin-markdown",
 	"description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
-	"devDependencies": {},
+	"main": "dist/index.js",
 	"files": [
 		"dist/"
 	],
-	"main": "dist/index.js",
-	"name": "typedoc-plugin-markdown",
 	"scripts": {
+		"prebuild": "ts-node scripts/build-resources",
 		"build": "rm -rf dist && tsc",
 		"build-and-test": "yarn run build && yarn run test",
 		"docs": "yarn run build && yarn run docs:md && yarn run docs:html",
 		"docs:html": "typedoc --plugin none --options ../../stub-project/typedoc.json --out ./docs/html",
 		"docs:md": "typedoc --plugin typedoc-plugin-markdown --hasOwnDocument all --options ../../stub-project/typedoc.json --out ./docs/md",
 		"markdownlint": "yarn run docs:md && markdownlint ./docs/md",
-		"prebuild": "ts-node scripts/build-resources",
 		"prepublishOnly": "yarn run lint && yarn run build && yarn run test"
-	}
+	},
+	"dependencies": {},
+	"devDependencies": {}
 }

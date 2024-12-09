@@ -1,17 +1,17 @@
 {
-	"dependencies": {},
+	"name": "typedoc-github-wiki-theme",
 	"description": "An extension of the default theme from typedoc-plugin-markdown to create a compatible file structure for Github Wiki pages.",
-	"devDependencies": {
-		"typedoc-plugin-markdown": "4.3.1"
-	},
+	"main": "dist/index.js",
 	"files": [
 		"dist/"
 	],
-	"main": "dist/index.js",
-	"name": "typedoc-github-wiki-theme",
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"demo": "rm -rf ./demo && yarn run build && typedoc --options ../typedoc-plugin-markdown/demo.options.json  --tsconfig ../typedoc-plugin-markdown/test/stubs/tsconfig.json --theme github-wiki --out ./demo",
 		"prepublishOnly": "yarn run lint && yarn run build"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typedoc-plugin-markdown": "4.3.1"
 	}
 }

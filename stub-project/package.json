@@ -1,5 +1,5 @@
 {
+	"name": "typedoc-plugin-markdown",
 	"dependencies": {},
-	"devDependencies": {},
-	"name": "typedoc-plugin-markdown"
+	"devDependencies": {}
 }

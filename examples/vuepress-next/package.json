@@ -1,11 +1,11 @@
 {
-	"dependencies": {},
-	"devDependencies": {
-		"typedoc-plugin-markdown": "*"
-	},
 	"name": "vuepress-example-v2",
 	"scripts": {
 		"docs:build": "vuepress build docs && npx http-server ./docs/.vuepress/dist -o",
 		"docs:dev": "vuepress dev docs"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typedoc-plugin-markdown": "*"
 	}
 }
