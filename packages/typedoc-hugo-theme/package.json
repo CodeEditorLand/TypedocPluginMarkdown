@@ -1,4 +1,5 @@
 {
+	"dependencies": {},
 	"description": "An extension of the Markdown theme from typedoc-plugin-markdown that prepends Hugo Front Matter variables in YAML format to pages.",
 	"devDependencies": {
 		"typedoc-plugin-markdown": "4.3.1"

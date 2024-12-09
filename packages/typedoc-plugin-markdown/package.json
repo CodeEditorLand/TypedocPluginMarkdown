@@ -1,5 +1,7 @@
 {
+	"dependencies": {},
 	"description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
+	"devDependencies": {},
 	"files": [
 		"dist/"
 	],

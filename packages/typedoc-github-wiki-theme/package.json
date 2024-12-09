@@ -1,4 +1,5 @@
 {
+	"dependencies": {},
 	"description": "An extension of the default theme from typedoc-plugin-markdown to create a compatible file structure for Github Wiki pages.",
 	"devDependencies": {
 		"typedoc-plugin-markdown": "4.3.1"

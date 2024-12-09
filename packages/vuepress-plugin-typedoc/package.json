@@ -1,4 +1,5 @@
 {
+	"dependencies": {},
 	"description": "A VuePress plugin to build API documentation with TypeDoc.",
 	"devDependencies": {
 		"typedoc-plugin-markdown": ">=4.3.1"
