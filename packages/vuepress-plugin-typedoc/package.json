@@ -15,6 +15,6 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"typedoc-plugin-markdown": ">=4.3.1"
+		"typedoc-plugin-markdown": ">=4.4.1"
 	}
 }
